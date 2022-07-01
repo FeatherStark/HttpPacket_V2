@@ -2,6 +2,7 @@ package open.sourceproject.httppacket;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
@@ -17,6 +18,12 @@ import java.net.URLConnection;
 import static open.sourceproject.httppacket.GetHistoryStorageList.*;
 
 public class MainController {
+
+    @FXML
+    private Button FontSizeAddButton;
+
+    @FXML
+    private Button FontSizeLowButton;
 
     @FXML
     private Button GetCopyButton;
@@ -149,5 +156,39 @@ public class MainController {
         }else {
             return Boolean.FALSE;
         }
+    }
+
+    // 调整字体大小 增加字号
+    @FXML
+    void ClickFontSizeAddButton(ActionEvent event) {
+        String StyleConfig = "-fx-font-size: "+String.valueOf(getGetRequireData().getFont().getSize()+2);  //获取字体大小并增加2个字号
+        getGetRequireData().setStyle(StyleConfig);
+        GetResponeData.setStyle(StyleConfig);
+    }
+
+    //调整字体大小 减小字号
+    @FXML
+    void ClickFontSizeLowButton(ActionEvent event) {
+        String StyleConfig = "-fx-font-size: "+String.valueOf(getGetRequireData().getFont().getSize()-2);
+        GetRequireData.setStyle(StyleConfig);
+        GetResponeData.setStyle(StyleConfig);
+    }
+
+    //按钮 文字换行
+    @FXML
+    void ClickChangeLineButton(ActionEvent event) {
+        System.out.println(GetRequireData.isWrapText());
+        if(GetRequireData.isWrapText()){
+            GetRequireData.setWrapText(false);
+            GetResponeData.setWrapText(false);
+        }else {
+            GetRequireData.setWrapText(true);
+            GetResponeData.setWrapText(true);
+        }
+    }
+
+    public void MainGETBarBind(Scene scene){
+//        MainGETBar.layoutXProperty().bind(scene.widthProperty());
+//        MainGETBar.layoutYProperty().bind(scene.heightProperty());
     }
 }
