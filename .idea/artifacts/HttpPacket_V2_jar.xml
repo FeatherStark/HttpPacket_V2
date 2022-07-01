@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="HttpPacket_V2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HttpPacket_V2_jar</output-path>
+    <root id="root">
+      <element id="archive" name="HttpPacket_V2.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="HttpPacket_V2" />
+      </element>
+    </root>
+  </artifact>
+</component>

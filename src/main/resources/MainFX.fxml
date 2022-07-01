@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="open.sourceproject.httppacket.MainController">
+   <children>
+      <TabPane fx:id="MainTablePanne" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" tabMaxWidth="100.0" tabMinHeight="30.0" tabMinWidth="100.0">
+        <tabs>
+          <Tab text="GET">
+            <content>
+              <AnchorPane fx:id="MainGETBar" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: BLUE;">
+                     <children>
+                        <SplitPane dividerPositions="0.5" maxHeight="560.0" maxWidth="800.0" minHeight="560.0" minWidth="800.0" prefHeight="560.0" prefWidth="800.0">
+                           <items>
+                              <AnchorPane maxHeight="550.0" maxWidth="400.0" minHeight="550.0" minWidth="400.0" prefHeight="550.0" prefWidth="400.0">
+                                 <children>
+                                    <ToolBar maxHeight="50.0" maxWidth="400.0" minHeight="50.0" minWidth="400.0" prefHeight="50.0" prefWidth="400.0">
+                                      <items>
+                                        <Button fx:id="GetLastHistoryButton" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#ClickLastHistoryButton" prefHeight="30.0" prefWidth="50.0" text="&lt;&lt;" />
+                                          <Button fx:id="GetNextHistoryButton" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#ClickNextHistoryButton" prefHeight="30.0" prefWidth="50.0" text="&gt;&gt;" />
+                                          <Button fx:id="GetCopyButton" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#ClickButtonCopy" prefHeight="30.0" prefWidth="80.0" text="复制" />
+                                          <Button fx:id="GetRequireDataButton" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#ClickGetRequireDataButton" prefHeight="30.0" prefWidth="80.0" text="发送请求" />
+                                      </items>
+                                    </ToolBar>
+                                    <TextArea fx:id="GetRequireData" layoutY="50.0" maxHeight="510.0" maxWidth="400.0" minHeight="510.0" minWidth="400.0" prefHeight="510.0" prefWidth="400.0" promptText="请求数据" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="550.0" maxWidth="400.0" minHeight="550.0" minWidth="400.0" prefHeight="550.0" prefWidth="400.0">
+                                 <children>
+                                    <ToolBar maxHeight="50.0" maxWidth="400.0" minHeight="50.0" minWidth="400.0" prefHeight="50.0" prefWidth="400.0">
+                                      <items>
+                                          <Button fx:id="ClickResponseCopyButton" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#ClickButtonResponseCopy" prefHeight="30.0" prefWidth="80.0" text="复制" />
+                                        <Button maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" text="Button" />
+                                          <Button maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="50.0" text="Button" />
+                                      </items>
+                                    </ToolBar>
+                                    <TextArea fx:id="GetResponeData" layoutY="50.0" maxHeight="510.0" maxWidth="400.0" minHeight="510.0" minWidth="400.0" prefHeight="510.0" prefWidth="400.0" promptText="响应内容" />
+                                 </children></AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="POST">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="OPTION">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="DELETE">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="PUT">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="HEAD">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
