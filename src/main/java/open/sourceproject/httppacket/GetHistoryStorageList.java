@@ -8,11 +8,9 @@ public class GetHistoryStorageList {
     static int HistoryStatus = 1;
 
     public static void Initialization(){
-        HistoryRequestList.add("请求体");
-        HistoryResponseList.add("响应内容");
-        String ContentText = "GET / HTTP/1.1 \n\rHost: example.com";
+        String ContentText = "GET / HTTP/1.1 \n\rHost: www.baidu.com";
         HistoryRequestList.add(ContentText);
-        HistoryResponseList.add("Response<html>");
+        HistoryResponseList.add("<html>Response</html>");
         System.out.println(HistoryRequestList);
     }
 }

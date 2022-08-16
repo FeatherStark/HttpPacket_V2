@@ -14,6 +14,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Properties;
 
 import static open.sourceproject.httppacket.GetHistoryStorageList.*;
 
@@ -51,6 +52,9 @@ public class MainController {
 
     @FXML
     private Button ClickResponseCopyButton;
+
+    @FXML
+    private Button StorageHtmlFIleButton;
 
     //初始化
     public void initialize(){
@@ -93,7 +97,7 @@ public class MainController {
             for(int i = 1;i<strs.length;i++){
                 String[] Headers = strs[i].split(": ");
                 if(Headers[0].equals("Host")){
-                    TargetUrl = "http://"+Headers[1]+URIs[1];
+                    TargetUrl = "http://"+Headers[1]+URIs[1];  //提取Host+/uri中的URL
                 }
             }
             URL url = new URL(TargetUrl);
@@ -142,6 +146,8 @@ public class MainController {
     @FXML
     void ClickNextHistoryButton(ActionEvent event) {
         if(HistoryRequestList.size()>HistoryStatus){
+            GetRequireData.setText("");
+            GetResponeData.setText("");
             HistoryStatus += 1;
             GetRequireData.setText(HistoryRequestList.get(HistoryStatus));
             GetResponeData.setText(HistoryResponseList.get(HistoryStatus));
@@ -191,4 +197,23 @@ public class MainController {
 //        MainGETBar.layoutXProperty().bind(scene.widthProperty());
 //        MainGETBar.layoutYProperty().bind(scene.heightProperty());
     }
+
+
+
+    @FXML
+    void ClickStorageHtmlFIleButton(ActionEvent event) throws IOException {
+        System.out.println("OnClickStorageHtml");
+        String WorkDir;
+        System.out.println(GetResponeData.getText());
+        if(GetResponeData.getText()!=null){
+            Properties properties = System.getProperties();
+            WorkDir = properties.getProperty("user.dir");
+            System.out.println(GetHistoryStorageList.HistoryStatus);
+            FileOutputStream fos = new FileOutputStream(WorkDir+"\\"+GetHistoryStorageList.HistoryStatus+".html",true);
+            fos.write(GetResponeData.getText().getBytes());
+            fos.close();
+            System.out.println(WorkDir);
+        }
+    }
+
 }

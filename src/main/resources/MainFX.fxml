@@ -34,10 +34,11 @@
                                  <children>
                                     <ToolBar maxHeight="50.0" maxWidth="400.0" minHeight="50.0" minWidth="400.0" prefHeight="50.0" prefWidth="400.0">
                                       <items>
-                                          <Button fx:id="ClickResponseCopyButton" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" onAction="#ClickButtonResponseCopy" prefHeight="30.0" prefWidth="80.0" text="复制" />
+                                          <Button fx:id="ClickResponseCopyButton" maxHeight="30.0" maxWidth="60.0" minHeight="30.0" minWidth="60.0" mnemonicParsing="false" onAction="#ClickButtonResponseCopy" prefHeight="30.0" prefWidth="60.0" text="复制" />
                                         <Button fx:id="FontSizeLowButton" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#ClickFontSizeLowButton" prefHeight="30.0" prefWidth="50.0" text="-" />
                                           <Button fx:id="FontSizeAddButton" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#ClickFontSizeAddButton" prefHeight="30.0" prefWidth="50.0" text="+" />
-                                          <Button fx:id="ChangeLineButton" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#ClickChangeLineButton" prefHeight="30.0" prefWidth="50.0" text="换行" />
+                                          <Button fx:id="ChangeLineButton" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onAction="#ClickChangeLineButton" prefHeight="30.0" prefWidth="70.0" text="自动换行" />
+                                          <Button fx:id="StorageHtmlFIleButton" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onAction="#ClickStorageHtmlFIleButton" prefHeight="30.0" prefWidth="70.0" text="存储文件" />
                                       </items>
                                     </ToolBar>
                                     <TextArea fx:id="GetResponeData" layoutY="50.0" maxHeight="510.0" maxWidth="400.0" minHeight="510.0" minWidth="400.0" prefHeight="510.0" prefWidth="400.0" promptText="响应内容" />
